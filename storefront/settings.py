@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sessions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'playground',
     'debug_toolbar',
     'store',
+    'store_custom',
     'tags',
     'likes'
 ]
@@ -86,11 +88,10 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storefront',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'MyPassword'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'storefront2',
+        'USER': 'storefront2',
+        'PASSWORD': '12345'
     }
 }
 
